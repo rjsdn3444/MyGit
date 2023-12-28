@@ -37,6 +37,7 @@ class STRcar(Car):
     
     def pushBrake(self): # 브레이크 구현
         self.setSpeed(self.getSpeed() - self.__brakeRate)
+        self.setRealSpeed(self.getRealSpeed() - self.__brakeRate)
 
     def changeGear(self): # 기어 구현
         self.setGear(not self.getGear())
