@@ -1,4 +1,7 @@
-from STcar.SimulationTestCar import Car as stCar
+# 제작자 : 김건우
+# 제작일 : 2023-12-27
+
+from STcar.SimulationTestCar_v_0_1 import Car as stCar
 import time
 from tkinter import *
 import os
@@ -12,11 +15,11 @@ def speedDown():
     global car1
     car1.setSpeed(car1.getSpeed() - 10)
 
-def speedLeft():
+def angleLeft():
     global car1
     car1.setWheelAngle(car1.getWheelAngle() - 4)
 
-def speedRight():
+def angleRight():
     global car1
     car1.setWheelAngle(car1.getWheelAngle() + 4)
 
@@ -39,9 +42,9 @@ upButton = Button(window, text="speedUP", width=10, height=5, bg="gray70", comma
 upButton.grid(row=1, column=1)
 downButton = Button(window, text="speedDOWN", width=10, height=5, bg="gray70", command=speedDown)
 downButton.grid(row=2, column=1)
-leftButton = Button(window, text="angleLEFT", width=10, height=5, bg="gray70", command=speedLeft)
+leftButton = Button(window, text="angleLEFT", width=10, height=5, bg="gray70", command=angleLeft)
 leftButton.grid(row=2, column=0)
-rightButton = Button(window, text="angleRIGHT", width=10, height=5, bg="gray70", command=speedRight)
+rightButton = Button(window, text="angleRIGHT", width=10, height=5, bg="gray70", command=angleRight)
 rightButton.grid(row=2, column=2)
 
 # GUI 실행
